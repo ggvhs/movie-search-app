@@ -12,8 +12,9 @@ function App() {
   const getMovie = async (searchTerm) =>{
     try {
       const response = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`)
-      const data = await response.json();
-      console.log(data)
+      const movie = await response.json();
+      // console.log(data)
+      setMovie(movie)
 
 
     } catch (error) {
@@ -22,11 +23,15 @@ function App() {
 
   }
 
+  useEffect(() => {
+    getMovie('shrek')
+  }, [])
+
   return (
-    <>
-    <Form />
-    <MovieDisplay />
-    </>
+    <div>
+    <Form movieSearch={getMovie}/>
+    <MovieDisplay movie={movie} />
+    </div>
   )
 }
 
