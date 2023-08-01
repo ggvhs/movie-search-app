@@ -1,0 +1,36 @@
+.Movie-Form {
+    background-color: rgb(42, 41, 41);
+}
+
+body{
+    background-color: rgb(42, 41, 41);
+    margin: 0;
+    padding: 0;
+}
+
+input{
+    margin-top: 20px;
+    background-color: rgb(42, 41, 41);
+
+    
+}
+
+input[type="text"], input[value="SUBMIT"] {
+    border: none;
+    outline: none;
+}
+
+input[type="text"]{
+    text-align: center;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(42, 41, 41);
+}
+
+img{
+    float: left;
+}

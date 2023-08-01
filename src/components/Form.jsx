@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import '../styles.css'
 
 function Form({movieSearch}) {
 
@@ -22,9 +23,9 @@ const handleSubmit = (e) =>{
 }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='Movie-Form'>
         <input type="text" value={form.searchTerm} onChange={handleChange} />
-        <input type="submit" value="submit" />
+        <input type="submit" value="SUBMIT" />
     </form>
   )
 }

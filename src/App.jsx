@@ -3,6 +3,10 @@ import MovieDisplay from "./components/MovieDisplay"
 import { useState } from "react"
 import { useEffect } from "react"
 
+import './styles.css'
+
+
+
 function App() {
 
   const apiKey = "44011384";
@@ -13,7 +17,7 @@ function App() {
     try {
       const response = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`)
       const movie = await response.json();
-      // console.log(data)
+      console.log(movie)
       setMovie(movie)
 
 
@@ -23,12 +27,12 @@ function App() {
 
   }
 
-  useEffect(() => {
-    getMovie('shrek')
-  }, [])
+  // useEffect(() => {
+  //   getMovie('shrek')
+  // }, [])
 
   return (
-    <div>
+    <div className="container">
     <Form movieSearch={getMovie}/>
     <MovieDisplay movie={movie} />
     </div>
